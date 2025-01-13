@@ -68,14 +68,14 @@ struct FunctionListView: View {
                 .border(Color.gray)
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
             
-            Button("解析输入") {
+            Button("Parse Input") {
                 parseInputText()
             }
             
-            Picker("排序方式", selection: $sortOption) {
-                Text("原始顺序").tag(SortOption.original)
-                Text("匹配优先").tag(SortOption.matched)
-                Text("未匹配优先").tag(SortOption.unmatched)
+            Picker("Sort by", selection: $sortOption) {
+                Text("Default").tag(SortOption.original)
+                Text("Matched").tag(SortOption.matched)
+                Text("UnMatched").tag(SortOption.unmatched)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
